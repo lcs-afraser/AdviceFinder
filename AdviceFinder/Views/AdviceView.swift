@@ -1,13 +1,7 @@
-//
-//  AdviceView.swift
-//  AdviceFinder
-//
-//  Created by Alistair Fraser on 2023-04-22.
-//
-
 import SwiftUI
 
 struct AdviceView: View {
+    
     //MARK: Stored properties
     
     //0.0 is invisible, 1.0 is visible
@@ -35,23 +29,23 @@ struct AdviceView: View {
                             .frame(width: 40)
                             .tint(.black)
                     })
-                    Text(currentAdvice.advice)
+                    Text(currentAdvice.slip.advice)
                         .font(.title)
                         .multilineTextAlignment(.center)
                         .opacity(adviceOpacity)
                     
                 } else {
-                    //Show a spinning wheel indicator until the advice is loaded
-                    ProgressView()
+                    //Show a spinning wheel indicator until the joke is loaded
+                  ProgressView()
                 }
                 
                 Spacer()
                 Button(action: {
                     // Reset the interface
                     adviceOpacity = 0.0
-                    
+
                     Task {
-                        // Get another piece of advice
+                        // Get another joke
                         withAnimation {
                             currentAdvice = nil
                         }
@@ -62,21 +56,15 @@ struct AdviceView: View {
                 })
                 .disabled(adviceOpacity == 0.0 ? true : false)
                 .buttonStyle(.borderedProminent)
-                
-                
-                .navigationTitle("Advice")
-                //Create an asynchronous task to be performed as this view appears
-                .task {
-                    if currentAdvice == nil {
-                        currentAdvice = await NetworkService.fetch()
-                    }
-                }
             }
+            .navigationTitle("Random Advice")
+        }
+        //Create an asynchronous task to be performed as this view appears
+        .task {
+            currentAdvice = await NetworkService.fetch()
         }
     }
 }
-
-
 
 struct AdviceView_Previews: PreviewProvider {
     static var previews: some View {
