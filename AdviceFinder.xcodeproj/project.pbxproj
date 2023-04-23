@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		6EBC206C29F4B72F009025D7 /* AdviceFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC206B29F4B72F009025D7 /* AdviceFinderApp.swift */; };
-		6EBC206E29F4B72F009025D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC206D29F4B72F009025D7 /* ContentView.swift */; };
 		6EBC207029F4B731009025D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC206F29F4B731009025D7 /* Assets.xcassets */; };
 		6EBC207329F4B731009025D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBC207229F4B731009025D7 /* Preview Assets.xcassets */; };
+		6EBC207B29F4B76E009025D7 /* AdviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC207A29F4B76E009025D7 /* AdviceView.swift */; };
+		6EBC207E29F4B7C7009025D7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC207D29F4B7C7009025D7 /* NetworkService.swift */; };
+		6EBC208129F4B7E6009025D7 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EBC208029F4B7E6009025D7 /* Advice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EBC206829F4B72F009025D7 /* AdviceFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdviceFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBC206B29F4B72F009025D7 /* AdviceFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceFinderApp.swift; sourceTree = "<group>"; };
-		6EBC206D29F4B72F009025D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6EBC206F29F4B731009025D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6EBC207229F4B731009025D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6EBC207A29F4B76E009025D7 /* AdviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceView.swift; sourceTree = "<group>"; };
+		6EBC207D29F4B7C7009025D7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6EBC208029F4B7E6009025D7 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,9 @@
 			isa = PBXGroup;
 			children = (
 				6EBC206B29F4B72F009025D7 /* AdviceFinderApp.swift */,
-				6EBC206D29F4B72F009025D7 /* ContentView.swift */,
+				6EBC207F29F4B7D5009025D7 /* Model */,
+				6EBC207C29F4B78E009025D7 /* Services */,
+				6EBC207929F4B762009025D7 /* Views */,
 				6EBC206F29F4B731009025D7 /* Assets.xcassets */,
 				6EBC207129F4B731009025D7 /* Preview Content */,
 			);
@@ -65,6 +71,30 @@
 				6EBC207229F4B731009025D7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6EBC207929F4B762009025D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6EBC207A29F4B76E009025D7 /* AdviceView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6EBC207C29F4B78E009025D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6EBC207D29F4B7C7009025D7 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6EBC207F29F4B7D5009025D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6EBC208029F4B7E6009025D7 /* Advice.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EBC206E29F4B72F009025D7 /* ContentView.swift in Sources */,
+				6EBC207B29F4B76E009025D7 /* AdviceView.swift in Sources */,
+				6EBC207E29F4B7C7009025D7 /* NetworkService.swift in Sources */,
 				6EBC206C29F4B72F009025D7 /* AdviceFinderApp.swift in Sources */,
+				6EBC208129F4B7E6009025D7 /* Advice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
